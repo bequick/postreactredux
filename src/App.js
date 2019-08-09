@@ -1,17 +1,18 @@
 import React from 'react';
 import { Button} from 'reactstrap'; 
+import CreatePost from './containers/CreatePost';
+import PostList from './containers/PostList';
 import NewPost from './components/NewPost';
-
 
 function App() {
   return (
     <div className="container">
-      <div className="row">
+      <div className="row" style={stylesApp}>
         <div className="col-md-6">
-          <NewPost />
+          <CreatePost />
         </div>
         <div className="col-md-6">
-          Display Post
+          <PostList />
         </div>
       </div>
     </div>
@@ -19,3 +20,7 @@ function App() {
 }
 
 export default App;
+
+const stylesApp = {
+  marginTop: 40
+}
